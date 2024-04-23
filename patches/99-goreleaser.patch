@@ -120,7 +120,7 @@ index 000000000..bbeb6f5d0
 +    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-arm64'
 +    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-s390x'
 +    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-ppc64le'
-+  - name_template: 'ghcr.io/maistra-test/trivy:{{ .Version.Major }}.{{ .Version.Minor }}'
++  - name_template: 'ghcr.io/maistra-test/trivy:{{ .Major }}.{{ .Minor }}'
 +    image_templates:
 +    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-amd64'
 +    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-arm64'
