@@ -33,7 +33,7 @@ index 000000000..bbeb6f5d0
 +
 +dockers:
 +  - image_templates:
-+      - "ghcr.io/undistro/trivy:{{ .Version }}-amd64"
++      - "ghcr.io/maistra-test/trivy:{{ .Version }}-amd64"
 +    use: buildx
 +    goos: linux
 +    goarch: amd64
@@ -53,7 +53,7 @@ index 000000000..bbeb6f5d0
 +    extra_files:
 +    - contrib/
 +  - image_templates:
-+      - "ghcr.io/undistro/trivy:{{ .Version }}-arm64"
++      - "ghcr.io/maistra-test/trivy:{{ .Version }}-arm64"
 +    use: buildx
 +    goos: linux
 +    goarch: arm64
@@ -73,7 +73,7 @@ index 000000000..bbeb6f5d0
 +    extra_files:
 +    - contrib/
 +  - image_templates:
-+      - "ghcr.io/undistro/trivy:{{ .Version }}-s390x"
++      - "ghcr.io/maistra-test/trivy:{{ .Version }}-s390x"
 +    use: buildx
 +    goos: linux
 +    goarch: s390x
@@ -93,7 +93,7 @@ index 000000000..bbeb6f5d0
 +    extra_files:
 +    - contrib/
 +  - image_templates:
-+      - "ghcr.io/undistro/trivy:{{ .Version }}-ppc64le"
++      - "ghcr.io/maistra-test/trivy:{{ .Version }}-ppc64le"
 +    use: buildx
 +    goos: linux
 +    goarch: ppc64le
@@ -114,24 +114,24 @@ index 000000000..bbeb6f5d0
 +    - contrib/
 +
 +docker_manifests:
-+  - name_template: 'ghcr.io/undistro/trivy:{{ .Version }}'
++  - name_template: 'ghcr.io/maistra-test/trivy:{{ .Version }}'
 +    image_templates:
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-amd64'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-arm64'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-s390x'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-ppc64le'
-+  - name_template: 'ghcr.io/undistro/trivy:{{ .Version.Major }}.{{ .Version.Minor }}'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-amd64'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-arm64'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-s390x'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-ppc64le'
++  - name_template: 'ghcr.io/maistra-test/trivy:{{ .Version.Major }}.{{ .Version.Minor }}'
 +    image_templates:
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-amd64'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-arm64'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-s390x'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-ppc64le'
-+  - name_template: 'ghcr.io/undistro/trivy:latest'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-amd64'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-arm64'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-s390x'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-ppc64le'
++  - name_template: 'ghcr.io/maistra-test/trivy:latest'
 +    image_templates:
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-amd64'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-arm64'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-s390x'
-+    - 'ghcr.io/undistro/trivy:{{ .Version }}-ppc64le'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-amd64'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-arm64'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-s390x'
++    - 'ghcr.io/maistra-test/trivy:{{ .Version }}-ppc64le'
 +
 +release:
 +  disable: true
