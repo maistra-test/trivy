@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "$(date): This is a test script running with arguments" "$@"
+
+echo "Hopefully this will work :)"
