@@ -2,6 +2,12 @@
 
 cd "$1"
 
+echo "Environment variables are"
+env | sed -e 's+^+    +'
+
+echo "listing hostedtoolcache"
+ls /opt/hostedtoolcache
+
 echo "Executing go version and status"
 go version
 go status
