@@ -2,11 +2,12 @@
 
 cd "$1"
 
+PATCH_GO_VERSION=$(egrep '^go ' go.mod | awk '{print $2}')
+PATCH_GO_PATH="${RUNNER_TOOL_CACHE}/go/${PATCH_GO_VERSION}.*/*/bin"
+export PATH="${PATH}:${PATCH_GO_PATH}"
+
 echo "Environment variables are"
 env | sed -e 's+^+    +'
-
-echo "listing hostedtoolcache"
-ls /opt/hostedtoolcache
 
 echo "Executing go version and status"
 go version
